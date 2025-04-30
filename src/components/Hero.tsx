@@ -12,7 +12,7 @@ function Hero() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <img
-          src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+          src="https://res.cloudinary.com/dfvwgjdsj/image/upload/v1746006659/A2Display_-_Affichage_dynamique_-_panneau_LED_zhjmd3.webp"
           alt="Borne interactive"
           className="w-full h-full object-cover"
         />
@@ -44,28 +44,50 @@ function Hero() {
           </div>
           
           <div className="hidden md:block">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white/20 p-6 rounded-lg">
-                  <Monitor className="h-8 w-8 text-white mb-4" />
-                  <h3 className="text-white font-semibold mb-2">Affichage Intelligent</h3>
-                  <p className="text-gray-200 text-sm">Gérez votre contenu en temps réel</p>
-                </div>
-                <div className="bg-white/20 p-6 rounded-lg">
-                  <Zap className="h-8 w-8 text-white mb-4" />
-                  <h3 className="text-white font-semibold mb-2">Performance</h3>
-                  <p className="text-gray-200 text-sm">Solution haute disponibilité</p>
-                </div>
-                <div className="bg-white/20 p-6 rounded-lg">
-                  <Shield className="h-8 w-8 text-white mb-4" />
-                  <h3 className="text-white font-semibold mb-2">Sécurité</h3>
-                  <p className="text-gray-200 text-sm">Protection des données</p>
-                </div>
-                <div className="bg-white/20 p-6 rounded-lg">
-                  <Monitor className="h-8 w-8 text-white mb-4" />
-                  <h3 className="text-white font-semibold mb-2">Multi-écrans</h3>
-                  <p className="text-gray-200 text-sm">Gestion centralisée</p>
-                </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <Link
+                  to="/secteur/collectivites"
+                  className="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition-colors col-span-2 lg:col-span-1"
+                >
+                  <h3 className="text-white font-semibold mb-2">Collectivités</h3>
+                  <p className="text-gray-200 text-sm">Informez vos citoyens</p>
+                </Link>
+                <Link
+                  to="/secteur/sante"
+                  className="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition-colors col-span-2 lg:col-span-1"
+                >
+                  <h3 className="text-white font-semibold mb-2">Résidences seniors</h3>
+                  <p className="text-gray-200 text-sm">Créez du lien humain</p>
+                </Link>
+                <Link
+                  to="/secteur/corporate"
+                  className="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition-colors col-span-2 lg:col-span-1"
+                >
+                  <h3 className="text-white font-semibold mb-2">Corporate</h3>
+                  <p className="text-gray-200 text-sm">Communication interne</p>
+                </Link>
+                <Link
+                  to="/secteur/sport"
+                  className="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition-colors col-span-2 lg:col-span-1"
+                >
+                  <h3 className="text-white font-semibold mb-2">Associations sportives</h3>
+                  <p className="text-gray-200 text-sm">Planning, scores</p>
+                </Link>
+                <Link
+                  to="/secteur/retail"
+                  className="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition-colors col-span-2 lg:col-span-1"
+                >
+                  <h3 className="text-white font-semibold mb-2">Commerce</h3>
+                  <p className="text-gray-200 text-sm">Affichage promotionnel</p>
+                </Link>
+                <Link
+                  to="/software"
+                  className="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition-colors col-span-2 lg:col-span-1"
+                >
+                  <h3 className="text-white font-semibold mb-2">Un Logiciel</h3>
+                  <p className="text-gray-200 text-sm">Une solution adaptée</p>
+                </Link>
               </div>
             </div>
           </div>
@@ -114,7 +136,7 @@ function Hero() {
     </section>
     
     {/* Le logiciel A2Display */}
-    <section className="py-20">
+    <section className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -157,53 +179,8 @@ function Hero() {
       </div>
     </section>
     
-    {/* Solutions par secteur */}
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">Solutions par secteur</h2>
-        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {[
-            { 
-              title: 'Collectivités', 
-              desc: 'Informez vos citoyens', 
-              link: '/secteur/collectivites' 
-            },
-            { 
-              title: 'Résidences seniors', 
-              desc: 'Créez du lien humain', 
-              link: '/secteur/sante' 
-            },
-            { 
-              title: 'Corporate', 
-              desc: 'Communication interne', 
-              link: '/secteur/corporate' 
-            },
-            { 
-              title: 'Associations sportives', 
-              desc: 'Planning, scores', 
-              link: '/secteur/sport' 
-            },
-            { 
-              title: 'Commerce', 
-              desc: 'Affichage promotionnel', 
-              link: '/secteur/retail' 
-            }
-          ].map((sector) => (
-            <Link
-              key={sector.title}
-              to={sector.link}
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <h3 className="font-semibold mb-2">{sector.title}</h3>
-              <p className="text-gray-600">{sector.desc}</p>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-    
     {/* Qui sommes-nous */}
-    <section className="py-20">
+    <section className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">👋 Qui sommes-nous ?</h2>
@@ -236,7 +213,7 @@ function Hero() {
           </div>
           <div>
             <img
-              src="https://res.cloudinary.com/dfvwgjdsj/image/upload/v1745422499/A2Display_-_logiciel_-_Affichage_dynamique_et_interactif_l7cfvb.jpg"
+              src="https://res.cloudinary.com/dfvwgjdsj/image/upload/v1746006628/A2Display_-_logiciel_-_Affichage_dynamique_et_interactif_esmqmb.webp"
               alt="A2Display - Solutions d'affichage dynamique"
               className="w-full h-auto rounded-lg shadow-lg"
             />
