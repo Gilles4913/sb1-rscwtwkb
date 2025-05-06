@@ -7,11 +7,22 @@ declare global {
   }
 }
 
+declare global {
+  interface Window {
+    gtag: (key: string, ...rest: any[]) => void;
+  }
+}
+
 export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Send page view to Google Analytics
+    window.gtag('event', 'page_view', {
+      page_path: pathname,
+    });
     
     // Send page view to Google Analytics
     window.gtag('event', 'page_view', {
